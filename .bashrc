@@ -99,10 +99,15 @@ fi
 #fi
 
 # ROS2 Stuff
+setup_ros2 () {
+    . ~/ros2_foxy/install/local_setup.bash
+    . /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+}
 echo "running ros2 setup script..."
-if . ~/ros2_foxy/install/local_setup.bash ; then
+if setup_ros2 ; then
     echo "success."
 else
     echo "something went wrong?"
 fi
+
 
